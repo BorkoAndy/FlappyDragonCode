@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings.Switch;
 
 public abstract class UI : MonoBehaviour
 {
@@ -10,7 +6,6 @@ public abstract class UI : MonoBehaviour
     public static string SetLang = "English";
     
     public abstract void SetEnglish();
-    public abstract void SetUkrainian();
-    
+    public abstract void SetUkrainian();    
 }
 

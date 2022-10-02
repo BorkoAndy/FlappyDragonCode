@@ -1,16 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class BlockersSpawner : MonoBehaviour
 {
     [SerializeField] public GameObject blockers;
     private int level;
+
     private void OnEnable() => Counter.OnLevelUp += LevelUp;
-
     private void OnDisable() => Counter.OnLevelUp -= LevelUp;
-
 
     void Start()
     {

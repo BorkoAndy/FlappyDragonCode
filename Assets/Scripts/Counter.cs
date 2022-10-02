@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,9 +8,7 @@ public class Counter : MonoBehaviour
     public static int counterValue;
     public static event Action OnLevelUp;
 
-    private void OnEnable() => Player.OnBlockerPass += increaseCounter;
-
-    
+    private void OnEnable() => Player.OnBlockerPass += increaseCounter;    
     private void OnDisable() => Player.OnBlockerPass -= increaseCounter;
 
     private void increaseCounter()
