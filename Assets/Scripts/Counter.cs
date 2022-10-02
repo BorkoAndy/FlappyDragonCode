@@ -5,8 +5,7 @@ using UnityEngine.UI;
 public class Counter : MonoBehaviour
 {
     [SerializeField] private Text counter;
-    public static int counterValue;
-    public static event Action OnLevelUp;
+    public static int counterValue;    
 
     private void OnEnable() => Player.OnBlockerPass += increaseCounter;    
     private void OnDisable() => Player.OnBlockerPass -= increaseCounter;
@@ -15,9 +14,9 @@ public class Counter : MonoBehaviour
     {
         counterValue++;
         counter.text = counterValue.ToString();
-        
-        if (counterValue%5 == 0) 
-            OnLevelUp?.Invoke();
+
+        if (counterValue % 5 == 0)
+            GameController.level++;
     }  
 }
 
